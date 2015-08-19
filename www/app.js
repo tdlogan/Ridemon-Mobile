@@ -30,10 +30,11 @@ RidemonApp.run(function($ionicPlatform) {
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
+  $urlRouterProvider.otherwise("/");
 
+  $stateProvider
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -41,46 +42,37 @@ RidemonApp.run(function($ionicPlatform) {
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.requestRide', {
+    url: '/request',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
+      'tab-request': {
+        templateUrl: 'components/request/tab-request.html'
+      },
+      controller: 'components/request/request.controller.js'
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.pokedex', {
+    url: '/pokedex',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
+      'tab-chats': {
+        templateUrl: 'components/pokedex/tab-pokedex.html'
+      },
+      controller: 'components/pokedex/pokedex.controller.js'
+    }
+  })
+   
+  .state('tab.leaderboard', {
+    url: '/leaderboard',
+    views: {
+      'tab-leaderboard': {
+        templateUrl: 'components/tab-leaderboard.html'
+      },
+      controller: 'components/leaderboard/leaderboard.controller.js'
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/request');
 
 });
