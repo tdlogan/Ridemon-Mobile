@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse" ng-controller="NavbarController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref-active="active" href="#" ui-sref="requestRide">Ridemon</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-1">
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a href="#" ui-sref="pokedex">Your Pokedex <span class="sr-only">(current)</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a href="#" ui-sref="leaderboard">Top Trainers <span class="sr-only">(current)</span></a></li>
+      </ul>
+       <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a href="#" ui-sref="about">About <span class="sr-only">(current)</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-show="user.loggedIn">
+        <li><a href="#">{{ user.first_name }}</a></li>
+        <li><a href="#" ng-click="logout()">Logout</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-show="!user.loggedIn">
+        <li><a href="#" ui-sref="login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

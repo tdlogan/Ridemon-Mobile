@@ -1,0 +1,68 @@
+.container-boxed-sm {
+  height: 250px;
+  border: 2px solid gray;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.img-sm-overlay-right {
+  position: absolute;
+  top: -60px;
+  left: 75%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.img-grav {
+  max-width: 200px;
+}
+
+.img-gif {
+  max-width: 150px;
+  border-radius: 20%;
+}
+
+.list-group-item {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.charities {
+  text-align: center;
+  font-weight: bold;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.panel-primary {
+  margin-top: 70px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uberlogo {
+  width: 250px;
+  margin: 15px;
+}
+
+.pokedex {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cancel-button {
+  float: right;
+  width: 25%;
+  margin-top: 10px;
+}
+
+
