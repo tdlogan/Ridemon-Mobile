@@ -30,7 +30,6 @@ RidemonApp.run(function($ionicPlatform) {
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $urlRouterProvider.otherwise("/");
 
   $stateProvider
   // setup an abstract state for the tabs directive
@@ -66,13 +65,13 @@ RidemonApp.run(function($ionicPlatform) {
     url: '/leaderboard',
     views: {
       'tab-leaderboard': {
-        templateUrl: 'components/tab-leaderboard.html'
+        templateUrl: 'components/leaderboard/tab-leaderboard.html'
       },
       controller: 'components/leaderboard/leaderboard.controller.js'
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  // $urlRouterProvider.otherwise('/tab/request');
+  $urlRouterProvider.otherwise('/tab/request');
 
 });
