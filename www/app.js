@@ -55,7 +55,7 @@ RidemonApp.run(function($ionicPlatform) {
   .state('tab.pokedex', {
     url: '/pokedex',
     views: {
-      'tab-chats': {
+      'tab-pokedex': {
         templateUrl: 'components/pokedex/tab-pokedex.html'
       },
       controller: 'components/pokedex/pokedex.controller.js'
@@ -73,6 +73,6 @@ RidemonApp.run(function($ionicPlatform) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/request');
+  // $urlRouterProvider.otherwise('/tab/request');
 
 });
